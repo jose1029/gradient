@@ -1,0 +1,23 @@
+{
+  "images": [
+    {
+      "filename": "gradient-1024.png",
+      "idiom": "universal",
+      "scale": "1x"
+    },
+    {
+      "filename": "gradient-2048.png",
+      "idiom": "universal",
+      "scale": "2x"
+    },
+    {
+      "filename": "gradient-3072.png",
+      "idiom": "universal",
+      "scale": "3x"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  }
+}

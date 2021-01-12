@@ -1,0 +1,13 @@
+diff --git a/node_modules/@types/react-native-snap-carousel/index.d.ts b/node_modules/@types/react-native-snap-carousel/index.d.ts
+index 93b52bc..668bdb8 100644
+--- a/node_modules/@types/react-native-snap-carousel/index.d.ts
++++ b/node_modules/@types/react-native-snap-carousel/index.d.ts
+@@ -261,6 +261,8 @@ export interface CarouselProps<T> {
+      * Callback fired before navigating to an item
+      */
+     onBeforeSnapToItem?(slideIndex: number): void;
++
++    onScrollIndexChanged?(slideIndex: number): void;
+ }
+ 
+ export type CarouselProperties<T> = ScrollViewProps & FlatListProps<T> & CarouselProps<T>;

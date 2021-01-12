@@ -1,0 +1,39 @@
+diff --git a/node_modules/@segment/analytics-react-native/build/cjs/bridge.d.ts b/node_modules/@segment/analytics-react-native/build/cjs/bridge.d.ts
+index bacb764..5f8b08e 100644
+--- a/node_modules/@segment/analytics-react-native/build/cjs/bridge.d.ts
++++ b/node_modules/@segment/analytics-react-native/build/cjs/bridge.d.ts
+@@ -18,7 +18,7 @@ export interface Configuration {
+         trackDeepLinks: boolean;
+     };
+ }
+-export declare type JsonValue = boolean | number | string | null | JsonList | JsonMap;
++export declare type JsonValue = boolean | number | string | null | undefined | JsonList | JsonMap;
+ export interface JsonMap {
+     [key: string]: JsonValue;
+     [index: number]: JsonValue;
+diff --git a/node_modules/@segment/analytics-react-native/build/esm/bridge.d.ts b/node_modules/@segment/analytics-react-native/build/esm/bridge.d.ts
+index bacb764..5f8b08e 100644
+--- a/node_modules/@segment/analytics-react-native/build/esm/bridge.d.ts
++++ b/node_modules/@segment/analytics-react-native/build/esm/bridge.d.ts
+@@ -18,7 +18,7 @@ export interface Configuration {
+         trackDeepLinks: boolean;
+     };
+ }
+-export declare type JsonValue = boolean | number | string | null | JsonList | JsonMap;
++export declare type JsonValue = boolean | number | string | null | undefined | JsonList | JsonMap;
+ export interface JsonMap {
+     [key: string]: JsonValue;
+     [index: number]: JsonValue;
+diff --git a/node_modules/@segment/analytics-react-native/src/bridge.ts b/node_modules/@segment/analytics-react-native/src/bridge.ts
+index 7f8c4ef..2c549be 100644
+--- a/node_modules/@segment/analytics-react-native/src/bridge.ts
++++ b/node_modules/@segment/analytics-react-native/src/bridge.ts
+@@ -20,7 +20,7 @@ export interface Configuration {
+ 	}
+ }
+ 
+-export type JsonValue = boolean | number | string | null | JsonList | JsonMap
++export type JsonValue = boolean | number | string | null | undefined | JsonList | JsonMap
+ export interface JsonMap {
+ 	[key: string]: JsonValue
+ 	[index: number]: JsonValue

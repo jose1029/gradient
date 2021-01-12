@@ -1,0 +1,120 @@
+{
+  "name": "gradient",
+  "version": "1.3.9",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "ios:device": "react-native run-ios --device",
+    "install:ios": "npm install && cd ios && pod install && cd ..",
+    "build:android": "cd android && ./gradlew assemble && ./gradlew bundle",
+    "start": "react-native start",
+    "start:reset": "npm start -- --reset-cache",
+    "test": "jest",
+    "lint": "eslint . || true",
+    "lint:fix": "eslint . --fix || true",
+    "lint:ts": "eslint --fix --plugin tsc --rule 'tsc/config: [2, {configFile: \"./tsconfig.json\"}]' .",
+    "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|md)\"",
+    "tsc": "tsc",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/slider": "^3.0.3",
+    "@react-navigation/bottom-tabs": "^5.8.0",
+    "@react-navigation/native": "^5.7.3",
+    "@react-navigation/routers": "^5.4.11",
+    "@react-navigation/stack": "^5.9.0",
+    "@segment/analytics-react-native": "^1.2.1",
+    "install": "^0.13.0",
+    "moment": "^2.26.0",
+    "npm": "^6.14.6",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
+    "react-native-calendars": "^1.308.0",
+    "react-native-date-picker": "^3.1.0",
+    "react-native-draggable-flatlist": "^2.3.6",
+    "react-native-exception-handler": "^2.10.8",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-get-random-values": "^1.4.0",
+    "react-native-modal": "^11.5.6",
+    "react-native-pure-jwt": "^2.2.1",
+    "react-native-reanimated": "^1.13.1",
+    "react-native-safe-area-context": "^3.1.8",
+    "react-native-screens": "^2.11.0",
+    "react-native-simple-toast": "^1.1.2",
+    "react-native-snap-carousel": "^4.0.0-beta.5",
+    "react-native-svg": "^12.1.0",
+    "realm": "^10.0.1",
+    "uuid": "^8.2.0",
+    "victory-core": "^35.0.8",
+    "victory-native": "^35.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/runtime": "^7.11.1",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/jest-native": "^3.1.0",
+    "@types/jest": "^26.0.9",
+    "@types/react": "^16.9.44",
+    "@types/react-native": "^0.63.3",
+    "@types/react-native-calendars": "^1.20.10",
+    "@types/react-native-snap-carousel": "^3.8.2",
+    "@types/react-test-renderer": "^16.9.3",
+    "@types/uuid": "^8.0.1",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
+    "babel-jest": "^26.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-tsc": "^1.2.0",
+    "husky": "^4.2.5",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.2.11",
+    "metro-react-native-babel-preset": "^0.63.0",
+    "patch-package": "^6.2.2",
+    "prettier": "^2.0.5",
+    "react-native-svg-transformer": "^0.14.3",
+    "react-native-testing-library": "^6.0.0",
+    "react-test-renderer": "^16.13.1",
+    "suppress-exit-code": "^0.1.0",
+    "typescript": "^3.9.7"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "./jestSetup.ts"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|@react-native-community|@react-navigation|(victory-))"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix --plugin tsc --rule 'tsc/config: [2, {configFile: \"./tsconfig.json\"}]'",
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json}": [
+      "prettier --write"
+    ]
+  }
+}

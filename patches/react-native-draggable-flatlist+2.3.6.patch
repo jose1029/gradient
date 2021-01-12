@@ -1,0 +1,28 @@
+diff --git a/node_modules/react-native-draggable-flatlist/lib/index.js b/node_modules/react-native-draggable-flatlist/lib/index.js
+index 6003b32..5ad9b77 100644
+--- a/node_modules/react-native-draggable-flatlist/lib/index.js
++++ b/node_modules/react-native-draggable-flatlist/lib/index.js
+@@ -734,7 +734,8 @@ var RowItem = /** @class */ (function (_super) {
+ }(react_1.default.PureComponent));
+ var styles = react_native_1.StyleSheet.create({
+     flex: {
+-        flex: 1
++        flex: 1,
++        alignSelf: 'stretch'
+     },
+     hoverComponentVertical: {
+         position: "absolute",
+diff --git a/node_modules/react-native-draggable-flatlist/src/index.tsx b/node_modules/react-native-draggable-flatlist/src/index.tsx
+index e322fba..368454c 100644
+--- a/node_modules/react-native-draggable-flatlist/src/index.tsx
++++ b/node_modules/react-native-draggable-flatlist/src/index.tsx
+@@ -1031,7 +1031,8 @@ class RowItem<T> extends React.PureComponent<RowItemProps<T>> {
+ 
+ const styles = StyleSheet.create({
+   flex: {
+-    flex: 1
++    flex: 1,
++    alignSelf: 'stretch'
+   },
+   hoverComponentVertical: {
+     position: "absolute",
